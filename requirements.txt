@@ -1,0 +1,10 @@
+streamlit
+boto3
+psycopg2-binary
+pyodbc
+langchain
+langchain-community
+langchain-openai
+langchain-core
+pgvector
+python-dotenv
