@@ -30,7 +30,10 @@ SQL_SERVER_CONN = {
 
 def get_table_metadata():
     """Fetch table metadata using AWS Glue Catalog"""
-    glue_client = boto3.client('glue')
+    glue_client = boto3.client(
+        service_name='glue',
+        region_name='ap-south-1'
+    )
     
     try:
         response = glue_client.get_tables(
@@ -59,7 +62,10 @@ def get_table_metadata():
 def generate_sql_query(natural_language_query, metadata):
     """Generate SQL query using Claude-3 with Messages API"""
 
-    bedrock = boto3.client("bedrock-runtime")
+    bedrock = boto3.client(
+        service_name='bedrock-runtime',
+        region_name='ap-south-1'
+    )
 
     messages = [
         {"role": "user", "content": f"""Given the following database schema:
