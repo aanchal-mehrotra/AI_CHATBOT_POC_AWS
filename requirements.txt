@@ -8,3 +8,4 @@ langchain-openai
 langchain-core
 pgvector
 python-dotenv
+pymssql
