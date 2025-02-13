@@ -208,6 +208,9 @@ def execute_sql_query(query: str, params: Optional[Tuple] = None) -> List[Tuple[
 def main():
 
     st.set_page_config(page_title="Text to SQL Converter", page_icon=":zap:", layout="wide")
+
+    metadata = get_table_metadata()
+    st.session_state.metadata = metadata
     
     st.title("Text to SQL Converter")
     st.markdown("Convert natural language questions to SQL queries")
