@@ -80,7 +80,7 @@ def generate_sql_query(natural_language_query, metadata):
         3. Use column names exactly as specified in the schema.
         4. If filtering by date, use `stocksourcedate`.
         5. If filtering by stock quantity, use `stockqty`.
-        6. Return only the SQL query without any explanation.
+        6. Return only the SQL query—no explanations, comments, or additional text.
         
         Examples:
 
